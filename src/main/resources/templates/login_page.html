@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<h1>登录界面</h1>
+<div id="uname">
+<form action="/doLogin" method='POST'>
+    <input name="uname" type="text" v-model="uname" placeholder="请输入姓名">
+    <p>姓名是 is: {{ uname }}</p>
+    <input name="pwd" type="password" v-model="pwd" placeholder="请输入密码">
+    <input type="submit">
+</form>
+</div>
+</body>
+<script>
+    var vm=new Vue({
+        el:'#uname',
+        data:{
+            'uname':'',
+            'pwd':''
+        }
+    })
+</script>
+</html>
